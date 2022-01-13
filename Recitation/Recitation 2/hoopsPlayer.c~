@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+  struct HoopsPlayer{
+    int playerNum;
+    float ppg;
+  }
+ struct HoopsPlayer playerList[10];
+
+void printPlayers(HoopsPlayer playerList[], int counter){
+  for(int i = 0; i < counter; i++){
+    printf("Player #%d: %f Average Points Per Game \n",playerList[i].playerNum. playerList[i].ppg)
+  }
+}
+  
+int main(){
+  int currNum;
+  float currPPG;
+  int counter;
+  for(int i = 0; i <10; i++){
+    printf("Enter Player's Number: ");
+    scanf("%d",&currNum);
+    if(currNum == -1){
+      break;
+    }
+    printf("Enter Player's Points Per Game: ");
+    scanf("%f", &currPPG);
+
+    playerList[i].playerNum = currNum;
+    playerlist[i}.ppg = currPPG;
+    counter++;
+    
+      
+  }
+
+  printPlayers(playerList)
+  
+}
