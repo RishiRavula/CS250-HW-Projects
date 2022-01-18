@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char* argv[]){
+  int input = argc;
+  int mersenne = (int)(pow(2,input)) - 1;
+  printf("%d",mersenne);
+  return 0;
+}

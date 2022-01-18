@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <cstdlib>
+#include <string.h>
+
+typedef struct LinkedList{
+  char* person;
+  struct LinkedList* next;
+} List;
+
+
+
+
+
+int main(int args, char* argv[]){
+  FILE *file = fopen(argv[1], "r");
+  char character;
+  char* infected = (char*) malloc(sizeof(char));
+  char* infector;
+  char* line[200] = "";
+  int allocSize = 1;
+  
+  while(true){
+    fgets(line,200,file){
+      
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+  	character = fgetc(file);
+  	if( ) {
+         break;
+  	}
+  	if(character == '\n'){
+
+  	
+  	
+  	}
+  	if (character == ' '){
+  	
+  	}
+  	else{
+  	allocSize++;
+  	line = (char*) realloc(infected, allocSize);
+  	infected = line;
+  	
+  	}
+  	for(int i = 0; i < allocSize; i++){
+  	printf("%c",*infected);
+  	infected++;
+  	}
+  	printf("%c",character);
+  	  	
+  }
+  fclose(file);
+  return(0);
+}
