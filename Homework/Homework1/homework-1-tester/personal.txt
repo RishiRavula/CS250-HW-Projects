@@ -3,5 +3,10 @@ Clarissa Bucky
 Drew Clarissa
 Mario Drew
 PrincessPeach Mario
+Daisy PrincessPeach
 Toad PrincessPeach
+Yoshi Toad
+Bowser Toad
+Waluigi Bowser
+Luigi Mario
 DONE
