@@ -10,14 +10,14 @@ struct LinkedList{
 LinkedList* insertNode(struct LinkedList* head, char* infected){
 	struct LinkedList* ll_ptr = head;
 	if(strcmp(infected, head->person) < 0){ //infected comes first
-		struct LinkedList* insert = (LinkedList*) malloc(sizeof(LinkedList));
+		struct LinkedList* insert = (LinkedList*) calloc(1,sizeof(LinkedList));
 		strcpy(insert->person,infected);
 		insert -> next = head;
 		return insert;
 	}
 	while(ll_ptr->next != NULL){
-		if(strcmp(infected,ll_ptr->person) < 0){
-			struct LinkedList* insert = (LinkedList*) malloc(sizeof(LinkedList));
+		if(strcmp(infected,ll_ptr->next -> person) < 0){
+			struct LinkedList* insert = (LinkedList*) calloc(1,sizeof(LinkedList));
 			strcpy(insert->person,infected);
 			insert -> next = ll_ptr -> next;
 			ll_ptr -> next = insert;
@@ -25,7 +25,7 @@ LinkedList* insertNode(struct LinkedList* head, char* infected){
 		}
 		ll_ptr = ll_ptr -> next;
 	}
-	struct LinkedList* end = (LinkedList*) malloc(sizeof(LinkedList));
+	struct LinkedList* end = (LinkedList*) calloc(1,sizeof(LinkedList));
 	strcpy(end->person,infected);
 	ll_ptr -> next = end;
 	return head;
@@ -78,17 +78,13 @@ void printfunction(struct LinkedList* head){
 
 int main(int args, char* argv[]){
   FILE *file;
-  int t = 0;
   file = fopen(argv[1],"r");
-  if (file == NULL){
-  t = 1;
-  }
   char* infected;
   char* infector;
   char line[200];
   char s[2] = " ";
   char* token;
-  struct LinkedList* head = (LinkedList*) malloc(sizeof(LinkedList));
+  struct LinkedList* head = (LinkedList*) calloc(1,sizeof(LinkedList));
   strcpy(head -> person,"BlueDevil");
   struct LinkedList* running_ptr = head;
   while(1){
